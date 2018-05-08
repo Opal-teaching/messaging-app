@@ -653,7 +653,7 @@ You will need to create a controller and its accompanying view, then add this pa
 index.html.
 ## Finished?
 
-Great! Please create a new branch with your name as firstname_lastname remote,
+Great! Please create a new remote branch with your name as firstname_lastname,
 [pushing to remote](https://help.github.com/articles/pushing-to-a-remote/)
 I will review your branches and give you notes the day after or later the same day.
 
