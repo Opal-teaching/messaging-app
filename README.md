@@ -1,4 +1,14 @@
 # Day 2
+
+## Description
+
+Today we will be introducing the front-end technologies for the app. We will go through an overview of the
+dependency managers, the set-up for a typical web-app and finally we will create a coding example in the context of a messaging app.
+By the end of this module, you should be a little bit more familiar with the Opal
+application set up, the common AngularJS flow, OnsenUI flow, and ultimately how to
+ set-up a project using these technologies. We will set-up testing, but we will
+ not take care of that until later (once I have a chance to catch up! ;p).
+
 ## Homework
 Readings:
 - HTML introduction: https://www.w3schools.com/html/default.asp
@@ -13,19 +23,12 @@ is going to evolve, this will include neat new features, or simply fixes
 to previous API. Their main job is to provide an API that JavaScript uses inside a browser
 to interact with the DOM tree, and to do other important functions such as a
 a request to a server via a [get request](https://www.w3schools.com/tags/ref_httpmethods.asp).
-Angular builds on top of this basic JavaScript API to create easier management of
-websites, it creates functions that wrap this functionality and provides them
-the Angular way.
+Angular builds on top of this basic JavaScript API in two ways, first
+it creates more  complex functionality and second it wraps this functions and offers
+them to the user under the Angular paradigm.
 - Git tutorial by Logan Montgomery: [git tutorial](https://docs.google.com/document/d/16PSag95XtbPKWGNi2K5PCtYNoGMo-haOJV3nsPXc2Z0/edit?usp=sharing),
-go through this tutorial to understand the basics of git.
-## Description
+please go through this tutorial, it will covers ome of the basic of Git.
 
-Today we will be introducing the front-end technologies for the app. We will go through an overview of the 
-dependency managers, the set-up for a typical web-app and finally we will create a coding example in the context of a messaging app.
-By the end of this module, you should be a little bit more familiar with the Opal
-application set up, the common AngularJS flow, OnsenUI flow, and ultimately how to
- set-up a project using these technologies. We will set-up testing, but we will
- not take care of that until later (once I have a chance to catch up! ;p).
 ## Resources
 This might be a lot to process, to aid this process, the following resources
 will help you plus the resources I will be adding along with the tutorial.
@@ -41,7 +44,9 @@ will help you plus the resources I will be adding along with the tutorial.
 ## Hello World the Opal Way
 
 After this mini-tutorial you should have an idea of what the config files
-do in our Angular application and how you'd go about creating each of them.
+do in our Angular application, how you'd go about creating each of them and
+lastly your first web app, i.e. Hello World the opal front-end way :)
+
 
 ### Instructions
 
@@ -144,14 +149,13 @@ where to start nesting the application.
 </html>
 ```
 Here we have told Angular to start our application from the body tag of our html tree.
-For more information on HTML or a start with it, see https://www.w3schools.com/html/html_intro.asp
-they are a great side to get started with it.
 Secondly, we instantiate the module, i.e.
 ```
 angular.module("<name-module>",[<list-of-angular-dependencies>])
 ```
-This will create an Angular module with the name give and declare
-the set of Angular dependencies for this module.
+This will create an Angular module with the name given and declare
+the set of Angular dependencies for the module.
+
 10. Instantiating an angular module.
 - Create 'app.js' file under the `app/js` directory and include
 
@@ -162,13 +166,14 @@ the set of Angular dependencies for this module.
 
 })();
 ```
-This creates and defines the angular module and the angular dependencies for the project
-`messaging-app` is the name of our module, and `onsen` is the angular dependency for the
-module. Notice the `(function(){})();`, this will encapsulate
+This creates and defines the angular module and the angular dependencies,
+ use the same name you used in the ng-app tag template.
+  In terms of dependencies, `onsen` will be our only dependency.
+   Notice the `(function(){})();`, this will encapsulate
 our code as to not let variables escape from scope, if you
 try to simply declare variables in a JavaScript file without function
 encapsulating. You will risk having collision
-problems between your variables in workspace.
+problems between your variables of different files in the workspace.
 Now we are ready to add logic to your up, we will now create an onsen navigator,
 and onsen page, and finally our logic for the hello world app.
 
@@ -251,7 +256,7 @@ Here are the contents for the controller.
 16. If the above fails, debug and figure out what's wrong :) Google is your friend and so am I.
 
 
-Your folder should look like this at this point:
+Your folder should look like this at the end:
 ![./images/image10.png]
 
 
@@ -369,7 +374,7 @@ that make this possible. The `karam-chrome-plugin` for instance will allow you t
 in Chrome automatically, `karma-jasmine` is the plugin that provides functions to interact
 with the AngularJS environment. For more information look at the [Karma tutorial](http://www.bradoncode.com/blog/2015/05/19/karma-angularjs-testing/),
 [AngularJS testing](https://docs.angularjs.org/guide/unit-testing)
-7. Add the following key,value pair to the scripts object in your package.json replacing
+3. Add the following key,value pair to the scripts object in your package.json replacing
 the value currently present:
 ```
     scripts:{
@@ -387,15 +392,15 @@ about testing. This will be a topic for later.
 
 The goal of this mini-project is to create a messaging app using this technology stack.
 We will have three pages.
-1. A page with conversations: [Conversations](./images/image1.png)
+1. A page with a list of conversations: [Conversations](./images/image1.png)
 2. A page to create conversations:[Create Conversations](./images/image6.png)
-3. A conversation page, where we can delete conversations:[Create Conversations](./images/image6.png)
+3. A conversation page, where we can delete conversations, and send messages:[Create Conversations](./images/image6.png)
 
-For more details on the different views of this app, go the the images folder in this repository.
+For more details on the different views of this app, go through the images folder in this repository.
 
 By the end of this, you should have an app where you can see all the conversations available,
- create conversations, and lastly,  navigate to an indinvidual conversation where you will
- be able to see the messages, write messages in the conversation,
+ create conversations, and lastly,  navigate to an indinvidual conversation and be able to see the messages
+ in the conversation, write messages in the conversation,
 and lastly, delete the conversation.
 
 To get guidance on how to write your controllers, services etc,
@@ -403,18 +408,21 @@ check the [styling guide for AngularJS](https://github.com/johnpapa/angular-styl
 ## Getting started
 
 1. Clone this repository.
-2. Create a branch with your name and checkout a branch with your name, I will
-check over this and make sure that its fine.
+2. Create a branch with your name and checkout the branch out, I will be looking at this to
+review your code.
 4. Install dependencies
-5. Open app in browser.
+5. Open the app in browser with our dear `http-server`
 6. Go to the app.js file and instantiate the Angular module, do not forget to add 'onsen' as a
     dependency! This is important otherwise you will get an error when running the repository.
-7. Read the whole spec below. The instructions will be given after.
+7. Please Read the whole spec below before. The instructions will be given after either way.
+
+I have left my files there with deleted information and a bunch of TODOs, you may choose to
+delete the and try to implement it yourself if you are comfortable enough. If not, follow along :)
 
 Have Fun!
 ## MVC
-As a reminder, we talked about the [Model-View-Controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) pattern before, in this case,
-for our very simplified app. In this app, we will use one model, which will be our MessengerService,
+As a reminder, we talked about the [Model-View-Controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
+ In this app, we will use one model, which will be our MessengerService,
 here we will mock-up data which will simulate a server call. This model will serve
 three controllers, the ConversationsController, the IndividualConversationController,
  and lastly, the NewConversationController. This controllers will be coupled with their
@@ -428,8 +436,13 @@ Do not worry about the *.spec.js files for now. Those are the testing files.
 To add your Onsen UI views the easy way visit: [Onsen Theme Roller](https://onsen.io/theme-roller/).
 Pick OnsenUI version <=2.10.0 on the left as the version, which is the closest to what we have,
 and choose the Patterns option. When you click on `show source` you will get the html and css
-use for this pattern, given that you have Onsen installed. You can sort of see what the html maps to
-on the view, you should be looking inside the `<body>` tags.
+use for this pattern. You can sort of see what the html maps to
+on the view (you should be looking inside the `<body>` tags), when implementing your own views
+you may steal this code and add it to your apps. You will need to declare a css file with a
+provided onsen css in the index.html file.
+
+__Note__: I have provided  all of this components already, this is only if you want to change something
+or you want to implement it yourself.
 ## Controllers
 The controllers you may have seen online for angular may look like this.
 ```
