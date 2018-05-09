@@ -3,7 +3,8 @@
   "description": "Front-end messaging app",
   "main": "index.js",
   "authors": [
-    "David Herrera"
+    "David Herrera",
+    "Anton Gladyr"
   ],
   "license": "MIT",
   "keywords": [
