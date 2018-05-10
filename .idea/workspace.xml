@@ -14,38 +14,75 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="individualConversationController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/controllers/messenger/individualConversationController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="newConversationController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/controllers/messenger/newConversationController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+            <state relative-caret-position="330">
+              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bower.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bower.json">
+      <file leaf-file-name="conversations.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/messages/conversations.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="137">
+              <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+              <folding>
+                <element signature="n#style#0;n#ons-icon#0;n#ons-toolbar-button#0;n#div#0;n#ons-toolbar#0;n#ons-page#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#ons-page#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="individual-conversation.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/messages/individual-conversation.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
+              <folding>
+                <element signature="n#style#0;n#ons-icon#0;n#ons-toolbar-button#0;n#div#2;n#ons-toolbar#0;n#ons-page#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#ons-page#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ons-list#0;n#ons-page#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#ons-list-item#0;n#ons-list#0;n#ons-page#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conversationsController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/controllers/messenger/conversationsController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+              <caret line="6" column="64" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/js/app.js">
+      <file leaf-file-name="messengerService.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/services/messenger/messengerService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+            <state relative-caret-position="480">
+              <caret line="32" column="112" lean-forward="true" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="112" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/index.html">
+      <file leaf-file-name="new-conversation.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/messages/new-conversation.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="49" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="49" />
+            <state relative-caret-position="450">
+              <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -61,6 +98,13 @@
       <find>tree</find>
       <find>john</find>
       <find>navigator</find>
+      <find>messa</find>
+      <find>Welcome to Opal</find>
+      <find>icon</find>
+      <find>ng-model</find>
+      <find>delete</find>
+      <find>name</find>
+      <find>dele</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/app/js</dir>
@@ -77,18 +121,18 @@
         <option value="$PROJECT_DIR$/app/views/messages/conversations.css" />
         <option value="$PROJECT_DIR$/app/js/services/request-to-server/requestToServerService.js" />
         <option value="$PROJECT_DIR$/data.json" />
-        <option value="$PROJECT_DIR$/app/js/controllers/messenger/conversationsController.spec.js" />
-        <option value="$PROJECT_DIR$/app/js/controllers/messenger/individualConversationController.js" />
-        <option value="$PROJECT_DIR$/app/views/messages/conversations.html" />
-        <option value="$PROJECT_DIR$/app/js/services/messenger/messengerService.js" />
-        <option value="$PROJECT_DIR$/app/views/messages/individual-conversation.html" />
-        <option value="$PROJECT_DIR$/app/views/messages/new-conversation.html" />
-        <option value="$PROJECT_DIR$/app/js/controllers/messenger/newConversationController.js" />
-        <option value="$PROJECT_DIR$/app/js/controllers/messenger/conversationsController.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/js/app.js" />
+        <option value="$PROJECT_DIR$/app/js/controllers/messenger/conversationsController.spec.js" />
+        <option value="$PROJECT_DIR$/app/js/controllers/messenger/individualConversationController.js" />
+        <option value="$PROJECT_DIR$/app/js/services/messenger/messengerService.js" />
+        <option value="$PROJECT_DIR$/app/views/messages/conversations.html" />
+        <option value="$PROJECT_DIR$/app/js/controllers/messenger/conversationsController.js" />
+        <option value="$PROJECT_DIR$/app/js/controllers/messenger/newConversationController.js" />
+        <option value="$PROJECT_DIR$/app/views/messages/new-conversation.html" />
+        <option value="$PROJECT_DIR$/app/views/messages/individual-conversation.html" />
       </list>
     </option>
   </component>
@@ -131,6 +175,55 @@
               <item name="messaging-app" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="messaging-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="messaging-app" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="messaging-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="messaging-app" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="messaging-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="messaging-app" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="messenger" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="messaging-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="messaging-app" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="messaging-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="messaging-app" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="messenger" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="messaging-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="messaging-app" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="messaging-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="messaging-app" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="messages" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -140,12 +233,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="SearchEverywhereHistoryKey" value="mess&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/app/js/services/messenger/messengerService.js&#10;ind&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/app/js/controllers/messenger/individualConversationController.js&#10;conver&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/app/views/messages/conversations.html&#10;index&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/app/index.html&#10;kar&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/karma.conf.js&#10;pa&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/package.json&#10;mes&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/app/js/services/messenger/messengerService.js&#10;in&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/app/views/messages/individual-conversation.html&#10;individ&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/app/views/messages/individual-conversation.html&#10;Mess&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/app/js/services/messenger/messengerService.js&#10;indi&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/app/views/messages/individual-conversation.html&#10;new&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/app/views/messages/new-conversation.html&#10;conv&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/app/views/messages/conversations.html" />
+    <property name="SearchEverywhereHistoryKey" value="mes&#9;FILE&#9;file:///Users/antongladyr/OPAL/messaging-app/app/js/services/messenger/messengerService.js&#10;mess&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/app/js/services/messenger/messengerService.js&#10;ind&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/app/js/controllers/messenger/individualConversationController.js&#10;conver&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/app/views/messages/conversations.html&#10;index&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/app/index.html&#10;kar&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/karma.conf.js&#10;pa&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/package.json&#10;in&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/app/views/messages/individual-conversation.html&#10;individ&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/app/views/messages/individual-conversation.html&#10;Mess&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/app/js/services/messenger/messengerService.js&#10;indi&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/app/views/messages/individual-conversation.html&#10;new&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/app/views/messages/new-conversation.html&#10;conv&#9;FILE&#9;file:///Users/davidherrera/Documents/Projects/opal-teaching/messaging-app/app/views/messages/conversations.html" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.karma.karma_node_package_dir" value="$PROJECT_DIR$/node_modules/karma" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="$USER_HOME$/.nvm/versions/node/v6.3.1/bin/node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -236,7 +330,7 @@
       <option name="presentableId" value="Default" />
       <updated>1525738389293</updated>
       <workItem from="1525738390958" duration="26638000" />
-      <workItem from="1525873565193" duration="1114000" />
+      <workItem from="1525873565193" duration="38692000" />
     </task>
     <servers />
   </component>
@@ -273,7 +367,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27752000" />
+    <option name="totallyTimeSpent" value="65330000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -286,17 +380,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21842733" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32827586" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.26068965" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3089655" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3075862" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32965517" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.36413792" />
+      <window_info anchor="bottom" id="TypeScript" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23272438" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.33103448" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="DB Execution Console" order="7" />
@@ -305,30 +401,31 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info id="DB Browser" order="2" />
+      <window_info anchor="right" x="0" y="0" width="270" height="600" id="Documentation" side_tool="true" weight="0.32956383" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="DB Execution Console" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
-      <window_info id="npm" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="2" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3089655" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.2494043" />
-      <window_info id="Structure" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18506752" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="DB Execution Console" order="8" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32827586" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="11" weight="0.3287483" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.30949107" />
-      <window_info id="DB Browser" order="0" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="Terminal" order="3" visible="true" weight="0.3287483" />
-      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="6" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="5" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="DB Browser" order="3" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.27172413" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32965517" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Favorites" order="4" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,13 +440,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/js/controllers/messenger/individualConversationController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers/messenger/newConversationController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -413,13 +503,6 @@
     <entry file="file://$PROJECT_DIR$/app/js/services/requestToServer.js" />
     <entry file="file://$PROJECT_DIR$/app/js/services/request-to-server/requestToServer.spec.js" />
     <entry file="file://$PROJECT_DIR$/app/lib/bower_components/angular-mocks/angular-mocks.js" />
-    <entry file="file://$PROJECT_DIR$/app/views/messages/conversations.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -430,76 +513,7 @@
     <entry file="file://$PROJECT_DIR$/app/js/services/request-to-server/requestToServerService.js" />
     <entry file="file://$PROJECT_DIR$/images/individual-conversation.png" />
     <entry file="file://$PROJECT_DIR$/images/conversations.png" />
-    <entry file="file://$PROJECT_DIR$/images/image4.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/image5.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/Screen Shot 2018-05-08 at 1.13.43 AM.png" />
-    <entry file="file://$PROJECT_DIR$/images/image8.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/image6.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/image7.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/image9.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/image3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/image2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/messages/conversations.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/messages/individual-conversation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="50" column="38" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/messages/new-conversation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="27" column="128" selection-start-line="27" selection-start-column="128" selection-end-line="27" selection-end-column="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers/messenger/individualConversationController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers/messenger/conversationsController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="31" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers/messenger/conversationsController.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/image1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/karma.conf.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -515,41 +529,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/services/messenger/messengerService.spec.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/services/auth/userService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/services/messenger/messengerService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="57" column="98" selection-start-line="57" selection-start-column="98" selection-end-line="57" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
           <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -563,15 +546,80 @@
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers/messenger/newConversationController.js">
+    <entry file="file://$PROJECT_DIR$/.bowerrc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        <state relative-caret-position="90">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.bowerrc">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/app/lib/bower_components/OnsenUI/js/onsenui_all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="38288" column="8" lean-forward="true" selection-start-line="38288" selection-start-column="8" selection-end-line="38288" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/image1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/image2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/image10.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/image9.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bower/lib/node_modules/ajv/lib/ajv.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="142" column="4" selection-start-line="142" selection-start-column="4" selection-end-line="142" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/image8.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/image7.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/image6.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/image5.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/image4.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/image3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bower/lib/node_modules/boom/test/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/messages/conversations.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3033">
+          <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -580,10 +628,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/messenger/conversationsController.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/services/auth/userService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/services/messenger/messengerService.spec.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/messages/conversations.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#ons-icon#0;n#ons-toolbar-button#0;n#div#0;n#ons-toolbar#0;n#ons-page#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#ons-page#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/messenger/conversationsController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <caret line="6" column="64" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/services/messenger/messengerService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="112" lean-forward="true" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/messages/new-conversation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/messenger/newConversationController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/messenger/individualConversationController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/messages/individual-conversation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
+          <folding>
+            <element signature="n#style#0;n#ons-icon#0;n#ons-toolbar-button#0;n#div#2;n#ons-toolbar#0;n#ons-page#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#ons-page#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ons-list#0;n#ons-page#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#ons-list-item#0;n#ons-list#0;n#ons-page#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

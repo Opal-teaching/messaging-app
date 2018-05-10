@@ -15,40 +15,30 @@
             </ons-toolbar-button>
         </div>
     </ons-toolbar>
-    <!--TODO Write condition in ng-show to either display to hide No message based on vm.noMessages-->
-    <div class="center" style="text-align: center" >
+    <div class="center" style="text-align: center" ng-show="vm.noMessages">
         <p class="msg-app-conversations-empty"> No messages!</p>
-
     </div>
     <ons-list style="margin-top:10px;height:100px">
         <ons-list-item>
-            <!--TODO: Add the ng-model tag here connecting it with the controller-->
             <input type="text" class="text-input text-input--transparent"
-                   placeholder="Enter message..." style="width: 100%" >
+                   placeholder="Enter message..." style="width: 100%" ng-model="vm.messageContent">
         </ons-list-item>
     </ons-list>
     <br>
-    <!--TODO: Add the ng-click tag here to send the message,
-    TODO: Add the ng-disabled tag to disable the button when the message contents are empty
-    -->
 
-    <ons-button  modifier="large">Send Message</ons-button>
+    <ons-button modifier="large" ng-click="vm.sendMessage()" ng-disabled="!vm.messageContent" >Send Message</ons-button>
     <br>
-    <!--TODO: Add the appropiate ng-show to connect with the vm.noMessages in the controller.-->
-    <ons-list class="timeline" >
-        <!--TODO: Add the message list using the ng-repeat tag.-->
-        <ons-list-item class="timeline-li" >
-            <ons-row>
 
+    <ons-list class="timeline" ng-show="!vm.noMessages">
+        <ons-list-item class="timeline-li" ng-repeat="message in vm.conversation.messages">
+            <ons-row>
                 <ons-col>
                     <div class="timeline-date">{{message.messageDate|date: 'MMM d, y h:mm a'}}</div>
                     <div class="timeline-from">
                         <span class="timeline-name">{{message.from}}</span>
                     </div>
                     <div class="timeline-message">
-
-                        <!--TODO: Add the appropriate p paragraph interpolating in the middle the message contents
-                        as {{message.contents}}-->
+                        <p> {{message.messageContent }} </p>
                     </div>
                 </ons-col>
             </ons-row>

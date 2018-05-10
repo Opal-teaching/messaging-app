@@ -8,14 +8,13 @@
 
         var conversations = [];
 
-		    // TODO: Add the following functions. Uncommend functions as you add them.
 	    var service = {
-		    // addConversation: addConversation,
-		    // getConversations: getConversations,
-		    // getConversationsFromServer:getConversationsFromServer,
-		    // sendMessage:sendMessage,
-		    // deleteConversation:deleteConversation,
-		    // getConversationById:getConversationById
+		    addConversation: addConversation,
+		    getConversations: getConversations,
+		    getConversationsFromServer: getConversationsFromServer,
+		    sendMessage: sendMessage,
+		    deleteConversation: deleteConversation,
+		    getConversationById: getConversationById
         };
 	    // Initialize conversations with dummy data;;
 	    conversations = [
@@ -55,9 +54,65 @@
 
         ///////////////////////////////////////
 
-	    /* TODO: Write your functions here, you may need dates, for this use JavaScript construct, new Date();*/
+
+        function addConversation(imageUrl, name) {
+            console.log();
+            conversations.push(
+                {
+                    "id": uuidv4(),
+                    "imageUrl": imageUrl,
+                    "lastMessage": null,
+                    "user_1": name,
+                    "user_2": UserService.getUser(),
+                    "messages": []
+                });
+
+            console.log(conversations);
+        }
 
 
+        function getConversations() {
+            return conversations;
+        }
 
+
+        function sendMessage(conversationId, messageContent) {
+            var elementId = conversations.findIndex(function(element) {
+                return element.id === conversationId;
+            });
+            conversations[elementId].messages.push(conversations[elementId].lastMessage);
+            conversations[elementId].lastMessage = {
+                    "messageContent": messageContent,
+                    "messageDate": new Date(),
+                    "messageId": uuidv4(),
+                    "from": UserService.getUser()
+                }
+        }
+
+        function deleteConversation(conversationId) {
+            var elementId = conversations.findIndex(function(element) {
+                return element.id === conversationId;
+            });
+            conversations.splice(elementId, 1);
+        }
+
+
+        function getConversationById(id) {
+           return conversations.find(function(element) {
+                return element.id === id;
+            })
+        }
+
+
+        function uuidv4() {
+            return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
+                (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+        )
+        }
+
+        /* TODO: Implement server side */
+
+         function getConversationsFromServer() {
+         }
     }
 })();

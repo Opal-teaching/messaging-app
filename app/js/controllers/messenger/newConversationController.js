@@ -5,12 +5,20 @@
 	function NewConversationController(MessengerService){
 		var vm = this;
 
-		vm.checkFields = checkFields;
-		// vm.createConversation = createConversation; // Uncomment as you add code
+        vm.checkFields = checkFields;
+		vm.createConversation = createConversation;
 		vm.imageUrl = "";
 		vm.name = "";
 
 		///////////////////////////////
-		/* Add your functions here*/
+
+		function createConversation() {
+            MessengerService.addConversation(vm.imageUrl, vm.name);
+            navi.popPage();
+		}
+		
+		function checkFields() {
+            return (vm.imageUrl === "" || vm.name === "");
+        }
 	}
 })();
