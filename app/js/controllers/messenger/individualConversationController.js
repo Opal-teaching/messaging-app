@@ -5,23 +5,34 @@
     IndividualConversationController.$inject = ["MessengerService"];
 
     function IndividualConversationController(MessengerService) {
-    	// TODO add the sendMessage, deleteConversation functions. Uncomment as you add them.
+        // TODO add the sendMessage, deleteConversation functions. Uncomment as you add them.
 
         var vm = this;
         vm.conversation = {};
         vm.noMessages = true;
         vm.messageContent = "";
-        // vm.sendMessage = sendMessage;
-        // vm.deleteConversation = deleteConversation;
+        vm.sendMessage = sendMessage;
+        vm.deleteConversation = deleteConversation;
 
         initController();
         //////////////////////////
 
         function initController() {
-	        // vm.conversation = navi.getCurrentPage().options.conversation;
-	        // vm.noMessages = (!(vm.conversation.messages && vm.conversation.messages.length > 0));
-	        //
+            vm.conversation = navi.getCurrentPage().options.conversation;
+            vm.noMessages = (!(vm.conversation.messages && vm.conversation.messages.length > 0));
+            //
         }
         /* Add your functions here*/
+
+        function sendMessage(){
+            MessengerService.sendMessage(vm.messageContent,vm.conversation);
+            vm.messageContent = "";
+            vm.noMessages = false;
+        }
+
+        function deleteConversation(){
+            MessengerService.deleteConversation(vm.conversation);
+            navi.popPage();
+        }
     }
 })();

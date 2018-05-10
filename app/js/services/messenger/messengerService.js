@@ -10,12 +10,12 @@
 
 		    // TODO: Add the following functions. Uncommend functions as you add them.
 	    var service = {
-		    // addConversation: addConversation,
-		    // getConversations: getConversations,
+		    addConversation: addConversation,
+			getConversations: getConversations,
 		    // getConversationsFromServer:getConversationsFromServer,
-		    // sendMessage:sendMessage,
-		    // deleteConversation:deleteConversation,
-		    // getConversationById:getConversationById
+		    sendMessage:sendMessage,
+		    deleteConversation:deleteConversation,
+		    getConversationById:getConversationById
         };
 	    // Initialize conversations with dummy data;;
 	    conversations = [
@@ -50,14 +50,61 @@
 				    {"messageContent":"Welcome to Opal!","messageDate":"May 7, 2018 9:03 am","messageId":"2","from":"Tarek Hijal"}]
 		    }
 	    ];
-        return service;
+
+        // conversations = [];
+
 
 
         ///////////////////////////////////////
 
 	    /* TODO: Write your functions here, you may need dates, for this use JavaScript construct, new Date();*/
 
+		function getConversations(){
+			return conversations;
+		};
 
+		function getConversationById(id){
+			conversations.forEach(function(item){
+				if (item.id===id){
+					return item;
+				}
+			})
+		};
+
+		function addConversation(name, url){
+            var length = conversations.length;
+            var new_ele = {
+                "id":length,
+                "imageUrl": url,
+                "lastMessage":{},
+                "user_1":name,
+                "user_2":UserService.getUser(),
+                "messages":[]
+
+            };
+            conversations.push(new_ele);
+            navi.popPage();
+		}
+
+		function sendMessage(messageContent,conversation){
+			console.log(new Date());
+			var new_msg = {
+				"messageContent": messageContent,
+				"messageDate" : new Date(),
+				"messageId": conversation.messages.length,
+				"from": UserService.getUser()
+			}
+			conversation.messages.push(new_msg);
+			conversation.lastMessage = conversation.messages[conversation.messages.length-1];
+
+		}
+
+		function deleteConversation(conversation){
+
+			conversations.splice(conversations.indexOf(conversation),1);
+		}
+
+        return service;
 
     }
 })();
