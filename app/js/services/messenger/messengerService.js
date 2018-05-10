@@ -10,12 +10,13 @@
 
 		    // TODO: Add the following functions. Uncommend functions as you add them.
 	    var service = {
-		    // addConversation: addConversation,
-		    // getConversations: getConversations,
+		    addConversation: addConversation,
+		    getConversations: getConversations,
 		    // getConversationsFromServer:getConversationsFromServer,
-		    // sendMessage:sendMessage,
-		    // deleteConversation:deleteConversation,
-		    // getConversationById:getConversationById
+		    sendMessage:sendMessage,
+		    deleteConversation:deleteConversation,
+            generateId:generateId,
+		    getConversationById:getConversationById
         };
 	    // Initialize conversations with dummy data;;
 	    conversations = [
@@ -56,7 +57,33 @@
         ///////////////////////////////////////
 
 	    /* TODO: Write your functions here, you may need dates, for this use JavaScript construct, new Date();*/
+        function getConversations(){
+        	return conversations;
+		}
 
+        function deleteConversation(id){
+        	var index = conversations.findIndex(x => x.id === id);
+            conversations.splice(index, 1);
+		}
+
+		function sendMessage(message,id){
+            var index = conversations.findIndex(x => x.id === id);
+            conversations[index].messages.push(message);
+            conversations[index].lastMessage = message;
+		}
+
+		function addConversation(conversation){
+            conversations.push(conversation);
+		}
+
+		function generateId(){
+            var lastId = conversations[conversations.length-1].id;
+            return parseInt(lastId)+1;
+		}
+
+		function getConversationById(id){
+            return conversations.find(x => x.id === id);
+		}
 
 
     }

@@ -11,44 +11,33 @@
         <div class="right">
             <ons-toolbar-button>
                 <ons-icon icon="ion-trash-a" fixed-width="false" style="font-size: 26px; vertical-align: -4px;"
-                          ng-click="vm.deleteConversation()"></ons-icon>
+                          ng-click="vm.confirmDelete()"></ons-icon>
             </ons-toolbar-button>
         </div>
     </ons-toolbar>
-    <!--TODO Write condition in ng-show to either display to hide No message based on vm.noMessages-->
-    <div class="center" style="text-align: center" >
+    <div class="center" style="text-align: center" ng-if="vm.noMessages">
         <p class="msg-app-conversations-empty"> No messages!</p>
 
     </div>
     <ons-list style="margin-top:10px;height:100px">
         <ons-list-item>
-            <!--TODO: Add the ng-model tag here connecting it with the controller-->
             <input type="text" class="text-input text-input--transparent"
-                   placeholder="Enter message..." style="width: 100%" >
+                   placeholder="Enter message..." style="width: 100%" ng-model="vm.messageContent">
         </ons-list-item>
     </ons-list>
     <br>
-    <!--TODO: Add the ng-click tag here to send the message,
-    TODO: Add the ng-disabled tag to disable the button when the message contents are empty
-    -->
-
-    <ons-button  modifier="large">Send Message</ons-button>
+    <ons-button  modifier="large" ng-click="vm.sendMessage()" ng-disabled="!vm.messageContent">Send Message</ons-button>
     <br>
-    <!--TODO: Add the appropiate ng-show to connect with the vm.noMessages in the controller.-->
-    <ons-list class="timeline" >
-        <!--TODO: Add the message list using the ng-repeat tag.-->
+    <ons-list class="timeline" ng-repeat="message in vm.conversation.messages" >
         <ons-list-item class="timeline-li" >
             <ons-row>
-
                 <ons-col>
                     <div class="timeline-date">{{message.messageDate|date: 'MMM d, y h:mm a'}}</div>
                     <div class="timeline-from">
                         <span class="timeline-name">{{message.from}}</span>
                     </div>
                     <div class="timeline-message">
-
-                        <!--TODO: Add the appropriate p paragraph interpolating in the middle the message contents
-                        as {{message.contents}}-->
+                        <p>{{message.messageContent}}</p>
                     </div>
                 </ons-col>
             </ons-row>
