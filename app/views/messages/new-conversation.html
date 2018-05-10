@@ -1,39 +1,39 @@
 <ons-page ng-controller="NewConversationController as vm">
     <ons-toolbar>
         <div class="left">
-            <!--TODO: Add the logic to pop the navigator page, see Onsen documentation-->
-            <ons-toolbar-button  >
-                Close
+            <!--Add the logic to pop the navigator page, see Onsen documentation-->
+            <ons-toolbar-button ng-click="navi.popPage()" >
+                Cancel
             </ons-toolbar-button>
         </div>
         <div class="center">
             New Conversation
         </div>
-        <div class="right">
+        <!--<div class="right">
             <ons-toolbar-button>
                 <ons-icon icon="ion-ios-search-strong" fixed-width="false" style="font-size: 26px; vertical-align: -4px;"></ons-icon>
             </ons-toolbar-button>
-        </div>
+        </div>-->
     </ons-toolbar>
     <div class="msg-app-new-conversation-login-form">
-        <!--TODO: Add the ng-model tags to attach it to the controller's vm.name, and vm.imageUrl-->
-        <input type="text" class="msg-app-new-conversation-text-input--underbar" placeholder="name" value=""
-               >
-        <input type="text" class="msg-app-new-conversation-text-input--underbar" placeholder="Image Url" value=""
+        <!--Add the ng-model tags to attach it to the controller's vm.name, and vm.imageUrl-->
+        <input ng-model="vm.name" type="text" class="msg-app-new-conversation-text-input--underbar" placeholder="Name" value=""
+            >
+        <input ng-model="vm.imageUrl" type="text" class="msg-app-new-conversation-text-input--underbar" placeholder="Image Url" value=""
             >
         <br>
         <div ng-show="vm.name">
            <p> Name: {{vm.name}}</p>
         </div>
-        <!-- TODO: Its not really a todo, see how I used here ng-show and the ng-src tag to display a the photo before creating the conversation-->
+        <!--See how I used here ng-show and the ng-src tag to display a the photo before creating the conversation-->
         <div ng-show="vm.imageUrl" >
             <p> Image:</p>
             <img ng-src="{{vm.imageUrl}}" alt="" class="msg-app-new-conversation-image">
         </div>
 
         <br><br>
-        <!--TODO: Add the ng-click action to createConversation and the ng-disabled to disable the button when the fields are not valid-->
-        <ons-button modifier="large" class="msg-app-new-conversation-login-button" >
+        <!--Add the ng-click action to createConversation and the ng-disabled to disable the button when the fields are not valid-->
+        <ons-button ng-click="vm.createConversation(vm.name, vm.imageUrl)" ng-disabled="!vm.checkFields()" modifier="large" class="msg-app-new-conversation-login-button" >
             Create Conversation
         </ons-button>
     </div>
