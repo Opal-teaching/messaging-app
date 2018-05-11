@@ -1,4 +1,11 @@
 (function(){
+    /**
+     * @ngdoc service
+     * @name messaging-app.service:MessengerService
+	 * @requires $q
+	 * @requires messaging-app.service:UserService
+     * @description Model for the chat application, manipulates the conversations array for a given user.
+     */
     var module = angular.module("messaging-app");
 
     module.service("MessengerService", MessengerService);
@@ -6,19 +13,28 @@
 
     function MessengerService($q,UserService) {
 
+        /**
+         * @ngdoc property
+         * @name messaging-app.service:MessengerService#conversations
+         * @propertyOf messaging-app.service:MessengerService
+         * @description Contains all conversations in the messaging app for this particular user.
+         * @type {Array}
+         */
         var conversations = [];
 
-		    // TODO: Get conversations from server. Add the following functions. Uncomment functions as you add them.
+		    // Add the following functions. Uncomment functions as you add them.
 	    var service = {
+
 		    addConversation: addConversation,
 		    getConversations: getConversations,
+            // TODO Get conversations from server.
 		    // getConversationsFromServer:getConversationsFromServer,
 		    sendMessage:sendMessage,
 		    deleteConversation:deleteConversation,
 		    getConversationById:getConversationById
         };
 
-	    // Initialize conversations with dummy data;;
+	    // Initialize conversations with dummy data
 	    conversations = [
 		    {
 			    "id":"0",
@@ -58,7 +74,14 @@
 
 	    /* You may need dates, for this use JavaScript construct, new Date();*/
 
-		// Creates a new conversation with null value for lastmessage and an empty array of messages
+        /**
+         * @ngdoc method
+         * @name messaging-app.service:MessengerService#addConversation
+         * @methodOf messaging-app.service:MessengerService
+         * @description Creates a new conversation with null value for lastmessage and an empty array of messages.
+         * @param {string} otherUser Name of the other person in the conversation
+         * @param {string} imageUrl URL of the image to use to represent the other person
+         */
 		function addConversation(otherUser, imageUrl){
 
 			conversations.push(
@@ -72,17 +95,22 @@
 				}
 			)
 		}
-
-		// Generates a new conversation id which isn't already used in the conversations array
+        /**
+         * @ngdoc method
+         * @name messaging-app.service:MessengerService#generateUniqueId
+         * @methodOf messaging-app.service:MessengerService
+         * @description Generates a new conversation id which isn't already used in the conversations array.
+         * @returns {number} Unique conversation id
+         */
 		function generateUniqueId(){
 
 			// Get an array of all the ids from conversations
-			let idList = conversations.map(
+			var idList = conversations.map(
                 function(x){return x.id;}
             );
 
 			// Get the minimum id value from the list of ids
-			let id = Math.min.apply(null,idList);
+			var id = Math.min.apply(null,idList);
 
 			// Loop to increment the minimum id until an unused id is found
 			do{
@@ -92,17 +120,22 @@
 
 			return id;
 		}
-
-        // Generates a new conversation id which isn't already used in the conversations array
+        /**
+         * @ngdoc method
+         * @name messaging-app.service:MessengerService#generateUniqueMessageId
+         * @methodOf messaging-app.service:MessengerService
+         * @description Generates a new message id which isn't already used in this conversation's messages array.
+         * @returns {number} Unique message id
+         */
         function generateUniqueMessageId(conversation){
 
             // Get an array of all the message ids from the conversation
-            let idList = conversations.map(
+            var idList = conversations.map(
                 function(x){return x.messageId;}
             );
 
             // Get the minimum id value from the list of ids
-            let id = Math.min.apply(null,idList);
+            var id = Math.min.apply(null,idList);
 
             // Loop to increment the minimum id until an unused id is found
             do{
@@ -112,22 +145,32 @@
 
             return id;
         }
-
-		// Gets a reference to the conversations array
+        /**
+         * @ngdoc method
+         * @name messaging-app.service:MessengerService#getConversations
+         * @methodOf messaging-app.service:MessengerService
+         * @description Getter for the conversations array (reference).
+         * @returns {Array} Conversations array
+         */
 		function getConversations(){
 			return conversations;
 		}
-
-		// Gets a deep copy of the conversations array
+        /**
+         * @ngdoc method
+         * @name messaging-app.service:MessengerService#getConversationsCopy
+         * @methodOf messaging-app.service:MessengerService
+         * @description Returns a deep copy of the conversations array.
+         * @returns {Array} Copy of the conversations array
+         */
 		function getConversationsCopy(){
 
-			let deepCopy = [];
+			var deepCopy = [];
 
 			// For each conversation...
-			for (let c in conversations) {
+			for (var c in conversations) {
 
                 // Copy all the messages for this conversation
-				let messagesCopy = copyMessages(c.messages);
+				var messagesCopy = copyMessages(c.messages);
 
 				// Add a copy of this conversation to the deep copy
 				deepCopy.push(
@@ -143,14 +186,19 @@
 			}
 			return deepCopy;
 		}
-
-		// Returns a deep copy of an array of messages
-		// If there are no messages, returns []
+        /**
+         * @ngdoc method
+         * @name messaging-app.service:MessengerService#copyMessages
+         * @methodOf messaging-app.service:MessengerService
+         * @description Returns a deep copy of the input messages array.
+		 * @param {Array} mArray Messages array to copy
+         * @returns {Array} Copy of the messages array
+         */
 		function copyMessages(mArray){
 
-            let messagesCopy = [];
+            var messagesCopy = [];
 
-            for (let m in mArray) {
+            for (var m in mArray) {
                 messagesCopy.push(copyMessage(m));
             }
 
@@ -159,20 +207,37 @@
 
 		// Creates a copy of an object (a message) by copying the values of all its enumerable own properties
 		// Warning: not a deep copy
+        /**
+         * @ngdoc method
+         * @name messaging-app.service:MessengerService#copyMessage
+         * @methodOf messaging-app.service:MessengerService
+         * @description Creates a copy of an object (a message) by copying the values of all its enumerable own
+		 *              properties. Not a deep copy if the message contains objects.
+         * @param {*} m Message to copy
+         * @returns {*} Copy of the message
+         */
 		function copyMessage(m){
 			return Object.assign({}, m);
 		}
-
-		// Add a message to the appropriate conversation
-		// Note: the conversation gains a copy of the message, and last message is another copy (no object references)
-		// This is safer because an added message is permanent (no outside function has a reference to it and can change it)
+        /**
+         * @ngdoc method
+         * @name messaging-app.service:MessengerService#sendMessage
+         * @methodOf messaging-app.service:MessengerService
+         * @param {*} conversation Conversation to send the message to
+		 * @param {string} contents Contents of the message
+         * @param {string} messageDate Date and time at which the message was sent
+         * @description Adds a message to the appropriate conversation.
+		 * 				<br>Note: the conversation gains a copy of the message, and last message is another copy
+		 * 				(no object references). This safer because an added message is permanent (no outside function
+		 * 				has a reference to it and can change it).
+         */
 		function sendMessage(conversation, contents, messageDate){
 
 			// Get the name of this user
-            let thisUser = UserService.getUser();
+            var thisUser = UserService.getUser();
 
 			// Create the message
-			let newMessage = {
+			var newMessage = {
           	  	"messageContent": contents,
 				"messageDate": messageDate,
 				"messageId": generateUniqueMessageId(),
@@ -185,12 +250,19 @@
 			// Update this conversation's lastMessage with another copy of the message
 			conversation.lastMessage = copyMessage(newMessage);
 		}
-
-		// Gets the first conversation matching the two given users, no matter the order of user_1 and user_2
-		// Returns null if no match is found
+        /**
+         * @ngdoc method
+         * @name messaging-app.service:MessengerService#getConversationByUsers
+         * @methodOf messaging-app.service:MessengerService
+         * @param {string} user_1 Name of the first user
+		 * @param {string} user_2 Name of the second user
+         * @description Gets the first conversation matching the two given users, no matter the order of user_1
+		 *              and user_2.
+         * @returns {Object|null} Conversation matching the users, or null when not found.
+         */
 		function getConversationByUsers(user_1, user_2){
 
-			for (let c in conversations){
+			for (var c in conversations){
 				if(    (c.user_1 === user_1 && c.user_2 === user_2)
 					|| (c.user_1 === user_2 && c.user_2 === user_1)){
 
@@ -202,20 +274,34 @@
 
         // Gets the first conversation matching the given conversation id
 		// Returns null if the id is not found
+        /**
+         * @ngdoc method
+         * @name messaging-app.service:MessengerService#getConversationById
+         * @methodOf messaging-app.service:MessengerService
+         * @param {string|number} id Conversation id
+         * @description Finds a conversation matching a conversation id
+         * @returns {Object|null} Conversation matching the id, or null when not found
+         */
         function getConversationById(id){
 
-            for (let c in conversations){
+            for (var c in conversations){
                 if(c.id === id) {
                     return c;
                 }
             }
             return null;
         }
-
+        /**
+         * @ngdoc method
+         * @name messaging-app.service:MessengerService#deleteConversation
+         * @methodOf messaging-app.service:MessengerService
+         * @param {string} conversation Conversation
+         * @description Deletes a conversation from the user's conversations array
+         */
         function deleteConversation(conversation) {
 
 			// Find the index of this conversation
-			let index = conversations.indexOf(conversation);
+			var index = conversations.indexOf(conversation);
 
 			// If the conversation is found, remove it
 			if (index >= 0){

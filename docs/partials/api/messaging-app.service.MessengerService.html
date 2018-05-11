@@ -1,0 +1,93 @@
+<h1><code ng:non-bindable="">MessengerService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">messaging-app</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="messaging-app-service-page messaging-app-service-messengerservice-page"><p>Model for the chat application, manipulates the conversations array for a given user.</p>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="api/ng.$q">$q</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="api/messaging-app.service:UserService">UserService</a></code>
+</li>
+</ul>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_addconversation">addConversation(otherUser, imageUrl)</h3>
+<div class="addconversation"><div class="messaging-app-service-page messaging-app-service-messengerservice-addconversation-page"><p>Creates a new conversation with null value for lastmessage and an empty array of messages.</p>
+</div><h5 id="methods_addconversation_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>otherUser</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-addconversation-page"><p>Name of the other person in the conversation</p>
+</div></td></tr><tr><td>imageUrl</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-addconversation-page"><p>URL of the image to use to represent the other person</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_copymessage">copyMessage(m)</h3>
+<div class="copymessage"><div class="messaging-app-service-page messaging-app-service-messengerservice-copymessage-page"><p>Creates a copy of an object (a message) by copying the values of all its enumerable own
+properties. Not a deep copy if the message contains objects.</p>
+</div><h5 id="methods_copymessage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>m</td><td><a href="" class="label type-hint type-hint-object">*</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-copymessage-page"><p>Message to copy</p>
+</div></td></tr></tbody></table><h5 id="methods_copymessage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">*</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-copymessage-page"><p>Copy of the message</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_copymessages">copyMessages(mArray)</h3>
+<div class="copymessages"><div class="messaging-app-service-page messaging-app-service-messengerservice-copymessages-page"><p>Returns a deep copy of the input messages array.</p>
+</div><h5 id="methods_copymessages_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>mArray</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-copymessages-page"><p>Messages array to copy</p>
+</div></td></tr></tbody></table><h5 id="methods_copymessages_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-copymessages-page"><p>Copy of the messages array</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_deleteconversation">deleteConversation(conversation)</h3>
+<div class="deleteconversation"><div class="messaging-app-service-page messaging-app-service-messengerservice-deleteconversation-page"><p>Deletes a conversation from the user&#39;s conversations array</p>
+</div><h5 id="methods_deleteconversation_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>conversation</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-deleteconversation-page"><p>Conversation</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_generateuniqueid">generateUniqueId()</h3>
+<div class="generateuniqueid"><div class="messaging-app-service-page messaging-app-service-messengerservice-generateuniqueid-page"><p>Generates a new conversation id which isn&#39;t already used in the conversations array.</p>
+</div><h5 id="methods_generateuniqueid_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-generateuniqueid-page"><p>Unique conversation id</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_generateuniquemessageid">generateUniqueMessageId()</h3>
+<div class="generateuniquemessageid"><div class="messaging-app-service-page messaging-app-service-messengerservice-generateuniquemessageid-page"><p>Generates a new message id which isn&#39;t already used in this conversation&#39;s messages array.</p>
+</div><h5 id="methods_generateuniquemessageid_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-generateuniquemessageid-page"><p>Unique message id</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getconversationbyid">getConversationById(id)</h3>
+<div class="getconversationbyid"><div class="messaging-app-service-page messaging-app-service-messengerservice-getconversationbyid-page"><p>Finds a conversation matching a conversation id</p>
+</div><h5 id="methods_getconversationbyid_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-getconversationbyid-page"><p>Conversation id</p>
+</div></td></tr></tbody></table><h5 id="methods_getconversationbyid_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object|null</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-getconversationbyid-page"><p>Conversation matching the id, or null when not found</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getconversationbyusers">getConversationByUsers(user_1, user_2)</h3>
+<div class="getconversationbyusers"><div class="messaging-app-service-page messaging-app-service-messengerservice-getconversationbyusers-page"><p>Gets the first conversation matching the two given users, no matter the order of user_1
+and user_2.</p>
+</div><h5 id="methods_getconversationbyusers_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>user_1</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-getconversationbyusers-page"><p>Name of the first user</p>
+</div></td></tr><tr><td>user_2</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-getconversationbyusers-page"><p>Name of the second user</p>
+</div></td></tr></tbody></table><h5 id="methods_getconversationbyusers_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object|null</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-getconversationbyusers-page"><p>Conversation matching the users, or null when not found.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getconversations">getConversations()</h3>
+<div class="getconversations"><div class="messaging-app-service-page messaging-app-service-messengerservice-getconversations-page"><p>Getter for the conversations array (reference).</p>
+</div><h5 id="methods_getconversations_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-getconversations-page"><p>Conversations array</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getconversationscopy">getConversationsCopy()</h3>
+<div class="getconversationscopy"><div class="messaging-app-service-page messaging-app-service-messengerservice-getconversationscopy-page"><p>Returns a deep copy of the conversations array.</p>
+</div><h5 id="methods_getconversationscopy_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-getconversationscopy-page"><p>Copy of the conversations array</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_sendmessage">sendMessage(conversation, contents, messageDate)</h3>
+<div class="sendmessage"><div class="messaging-app-service-page messaging-app-service-messengerservice-sendmessage-page"><p>Adds a message to the appropriate conversation.
+<br>Note: the conversation gains a copy of the message, and last message is another copy
+(no object references). This safer because an added message is permanent (no outside function
+has a reference to it and can change it).</p>
+</div><h5 id="methods_sendmessage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>conversation</td><td><a href="" class="label type-hint type-hint-object">*</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-sendmessage-page"><p>Conversation to send the message to</p>
+</div></td></tr><tr><td>contents</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-sendmessage-page"><p>Contents of the message</p>
+</div></td></tr><tr><td>messageDate</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-sendmessage-page"><p>Date and time at which the message was sent</p>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+<div class="member property"><h2 id="properties">Properties</h2>
+<ul class="properties"><li><h3 id="properties_conversations">conversations</h3>
+<div class="conversations"><div class="messaging-app-service-page messaging-app-service-messengerservice-conversations-page"><p>Contains all conversations in the messaging app for this particular user.</p>
+</div></div>
+</li>
+</ul>
+</div>
+</div>
