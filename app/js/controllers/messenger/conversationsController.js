@@ -32,6 +32,13 @@
          * @description Flag that toggles the 'No message' text.
          */
         vm.emptyConversations = true;
+        /**
+         * @ngdoc property
+         * @name messaging-app.controller:ConversationsController#searchConversationString
+         * @propertyOf messaging-app.controller:ConversationsController
+         * @description Search string typed into the search bar.
+         */
+        vm.searchConversationString = "";
 
         vm.newConversation = newConversation;
         vm.goToConversation = goToConversation;

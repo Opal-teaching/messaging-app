@@ -16,6 +16,11 @@
             </ons-toolbar-button>
         </div>-->
     </ons-toolbar>
+    <ons-list>
+        <ons-list-item style="margin-top:10px">
+            <input type="search" value="" placeholder="Search" class="search-input" ng-model="vm.searchConversationString">
+        </ons-list-item>
+    </ons-list>
     <!--Add Ng-show to the div tag below even to display or hide the message depending on the whether there are conversations-->
     <div ng-show="vm.emptyConversations" class="center" style="text-align: center">
         <p class="msg-app-conversations-empty">No conversations!</p>
@@ -25,7 +30,8 @@
         <!-- Use ng-repeat in the tag before to iterate and display ng-repeat="conversation in vm.conversations"
              Add an ng-click to take action upon tapping on the list item, i.e navigating to conv.-->
         <!-- TODO | orderBy:(lastMessage.messageDate|date: 'MMM d, y h:mm a'):true-->
-        <ons-list-item ng-repeat="conversation in vm.conversations"
+        <!-- Filters the conversations by the search term applied to the name of the other user. -->
+        <ons-list-item ng-repeat="conversation in vm.conversations | filter: {user_1:vm.searchConversationString}"
                        ng-click="vm.goToConversation(conversation)"
                        class="timeline-li" modifier="tappable"  >
             <ons-row>
