@@ -2,7 +2,7 @@
     <ons-toolbar>
         <div class="left">
             <!--TODO: Add the logic to pop the navigator page, see Onsen documentation-->
-            <ons-toolbar-button  >
+            <ons-toolbar-button ng-click="navi.popPage()" >
                 Close
             </ons-toolbar-button>
         </div>
@@ -18,9 +18,9 @@
     <div class="msg-app-new-conversation-login-form">
         <!--TODO: Add the ng-model tags to attach it to the controller's vm.name, and vm.imageUrl-->
         <input type="text" class="msg-app-new-conversation-text-input--underbar" placeholder="name" value=""
-               >
+            ng-model="vm.name">
         <input type="text" class="msg-app-new-conversation-text-input--underbar" placeholder="Image Url" value=""
-            >
+            ng-model="vm.imageUrl">
         <br>
         <div ng-show="vm.name">
            <p> Name: {{vm.name}}</p>
@@ -33,7 +33,7 @@
 
         <br><br>
         <!--TODO: Add the ng-click action to createConversation and the ng-disabled to disable the button when the fields are not valid-->
-        <ons-button modifier="large" class="msg-app-new-conversation-login-button" >
+        <ons-button ng-click="vm.createConversation()" ng-disabled="vm.checkFields()" modifier="large" class="msg-app-new-conversation-login-button" >
             Create Conversation
         </ons-button>
     </div>

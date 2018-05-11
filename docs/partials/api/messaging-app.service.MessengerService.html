@@ -1,0 +1,52 @@
+<h1><code ng:non-bindable="">MessengerService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">messaging-app</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="messaging-app-service-page messaging-app-service-messengerservice-page"><p>Model for the chat application, manipulates the conversations array</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_addconversation">addConversation(name, imageUrl)</h3>
+<div class="addconversation"><div class="messaging-app-service-page messaging-app-service-messengerservice-addconversation-page"><p>add a conversation into conversation array by taking a name and an URL</p>
+</div><h5 id="methods_addconversation_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-addconversation-page"><p>Name of the person in conversation</p>
+</div></td></tr><tr><td>imageUrl</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-addconversation-page"><p>of the person&#39;s image</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_deleteconversation">deleteConversation(idToDel)</h3>
+<div class="deleteconversation"><h5 id="methods_deleteconversation_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>idToDel</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-deleteconversation-page"><p>conversation id</p>
+</div></td></tr></tbody></table><h5 id="methods_deleteconversation_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-deleteconversation-page"><p>success/failure flag</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getconversationbyid">getConversationById(idWanted)</h3>
+<div class="getconversationbyid"><div class="messaging-app-service-page messaging-app-service-messengerservice-getconversationbyid-page"><p>Searches and returns a conversation based on an id</p>
+</div><h5 id="methods_getconversationbyid_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>idWanted</td><td><a href="" class="label type-hint type-hint-string">string</a><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-getconversationbyid-page"><p>the conversation id</p>
+</div></td></tr></tbody></table><h5 id="methods_getconversationbyid_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object|null</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-getconversationbyid-page"><p>returns the conversation of the id or null if not found</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getconversations">getConversations()</h3>
+<div class="getconversations"><div class="messaging-app-service-page messaging-app-service-messengerservice-getconversations-page"><p>Getter for the conversations array</p>
+</div><h5 id="methods_getconversations_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-getconversations-page"><p>conversations array</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getconversationsfromserver">getConversationsFromServer()</h3>
+<div class="getconversationsfromserver"><h5 id="methods_getconversationsfromserver_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-getconversationsfromserver-page"><p>conversations array</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_sendmessage">sendMessage(idSent, message)</h3>
+<div class="sendmessage"><div class="messaging-app-service-page messaging-app-service-messengerservice-sendmessage-page"><p>Adds a message to a conversation.</p>
+</div><h5 id="methods_sendmessage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>idSent</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-sendmessage-page"><p>conversation id</p>
+</div></td></tr><tr><td>message</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-sendmessage-page"><p>message content</p>
+</div></td></tr></tbody></table><h5 id="methods_sendmessage_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="messaging-app-service-page messaging-app-service-messengerservice-sendmessage-page"><p>success/failure flag</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+<div class="member property"><h2 id="properties">Properties</h2>
+<ul class="properties"><li><h3 id="properties_conversations">conversations</h3>
+<div class="conversations"><div class="messaging-app-service-page messaging-app-service-messengerservice-conversations-page"><p>Contains the conversations of the messaging app for this particular user.</p>
+</div></div>
+</li>
+</ul>
+</div>
+</div>
