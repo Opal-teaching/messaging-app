@@ -59,7 +59,8 @@
          * @description Calls the MessengerService to add a message to the conversation array, updates vm.conversations
          *              after.
          */
-        function sendMessage(){
+        function sendMessage()
+        {
             MessengerService.sendMessage(vm.messageContent,vm.conversation);
             vm.messageContent = "";
             vm.noMessages = false;

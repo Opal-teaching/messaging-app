@@ -11,7 +11,8 @@
     module.controller('ConversationsController', ConversationsController);
 
     ConversationsController.$inject = ["MessengerService", "$scope", '$timeout'];
-    function ConversationsController(MessengerService, $scope, $timeout){
+    function ConversationsController(MessengerService, $scope, $timeout)
+    {
 
     	// TODO: Implement the following functions and a view
         var vm = this;

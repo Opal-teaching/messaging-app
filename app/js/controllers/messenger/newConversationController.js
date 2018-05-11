@@ -52,7 +52,8 @@
          * @description Calls {@link  messaging-app.service:MessengerService#addConversation MessengerService.addConversation}
          *              to add a conversation for the user
          */
-		function createConversation(){
+		function createConversation()
+		{
 
 			MessengerService.addConversation(vm.name,vm.imageUrl);
 
