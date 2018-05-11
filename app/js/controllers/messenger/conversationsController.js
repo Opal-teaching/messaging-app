@@ -1,6 +1,13 @@
 (function(){
     var module = angular.module('messaging-app');
-
+    /**
+     * @ngdoc controller
+     * @name messaging-app.controller:ConversationsController
+     * @requires messaging-app.service:MessengerService
+     * @requires $timeout
+     * @requires $scope
+     * @description Controller for ./views/messages/conversations.html
+     */
     module.controller('ConversationsController', ConversationsController);
 
     ConversationsController.$inject = ["MessengerService", "$scope", '$timeout'];
@@ -8,19 +15,47 @@
 
     	// TODO: Implement the following functions and a view
         var vm = this;
+        /**
+         * @ngdoc property
+         * @name messaging-app.controller:ConversationsController#conversations
+         * @propertyOf messaging-app.controller:ConversationsController
+         * @description Contains array of conversations
+         */
         vm.conversations = [];
         vm.newConversation = newConversation; // uncomment once implemented.
         vm.goToConversation = goToConversation;// uncomment once implemented.
+        /**
+         * @ngdoc property
+         * @name messaging-app.controller:ConversationsController#emptyConversations
+         * @propertyOf messaging-app.controller:ConversationsController
+         * @description Flag to determine when to show 'No message'
+         */
         vm.emptyConversations = true;
+        /**
+         * @ngdoc property
+         * @name messaging-app.controller:ConversationsController#searchConversationString
+         * @propertyOf messaging-app.controller:ConversationsController
+         * @description String used to search conversations, it matches names
+         */
+        vm.searchConversationString = "";
         initController();
 
 
 
 
         ////////////////////////////////////////////
+        /**
+         * @ngdoc method
+         * @name messaging-app.controller:ConversationsController#initController
+         * @methodOf messaging-app.controller:ConversationsController
+         * @description Initializes the controller and the scope variables
+         */
         function initController(){
 
 	        vm.conversations = MessengerService.getConversations(); //uncomment when ready
+            vm.conversations = vm.conversations.sort(function(conv1,conv2){
+                return conv1.lastMessage.messageDate < conv2.lastMessage.messageDate;
+            });
 	        vm.emptyConversations = (vm.conversations.length !== 0)? false:true; //uncomment when ready
 
 	        // Initialize events
@@ -29,25 +64,51 @@
 
         }
 
+        /**
+         * @ngdoc method
+         * @name messaging-app.controller:ConversationsController#goToConversation
+         * @methodOf messaging-app.controller:ConversationsController
+         * @description Pushes the new-conversation.html page onto the stack with the selected
+         *              conversation as parameter
+         */
         function goToConversation(conversation){
             navi.pushPage('./views/messages/individual-conversation.html', {conversation:conversation});
         }
 
+        /**
+         * @ngdoc method
+         * @name messaging-app.controller:ConversationsController#newConversation
+         * @methodOf messaging-app.controller:ConversationsController
+         * @description Pushes the new-conversation.html page onto the stack using a 'lift' animation
+         */
         function newConversation(){
-            navi.pushPage('./views/messages/new-conversation.html');
+            navi.pushPage('./views/messages/new-conversation.html',{"animation":"lift"});
         }
 
-
+        /**
+         * @ngdoc method
+         * @name messaging-app.controller:ConversationsController#initializeEvents
+         * @methodOf messaging-app.controller:ConversationsController
+         * @description Initializes navigator event to refresh conversations
+         */
         function initializeEvents() {
-            // This function refreshs your conversation list any time you pop a page so to keep them up to date.
-            // We will go over events later.
-            navi.on("postpop",function(event){
+            navi.on("prepop",function(event){
                 $timeout(function(){
-                    vm.conversations = MessengerService.getConversations(); //uncomment when ready
-                    vm.emptyConversations = (vm.conversations.length === 0);//uncomment when ready
+                    vm.conversations = MessengerService.getConversations();
+                    vm.conversations = vm.conversations.sort(function(conv1,conv2){
+                        return new Date(conv1.lastMessage.messageDate) < new Date(conv2.lastMessage.messageDate);
+                    });
+                    vm.emptyConversations = (vm.conversations.length === 0);
                 });
             });
         }
+
+        /**
+         * @ngdoc event
+         * @name messaging-app.controller:ConversationsController#$destroy
+         * @eventOf messaging-app.controller:ConversationsController
+         * @description Listens to the controller destruction and kills event listeners.
+         */
 		// Ignore this for now.
         $scope.$on('$destroy', function() {
 		    navi.off("postpop");

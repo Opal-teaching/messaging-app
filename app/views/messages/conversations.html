@@ -12,11 +12,16 @@
             Conversations
         </div>
         <div class="right">
-            <ons-toolbar-button>
-                <ons-icon icon="ion-ios-search-strong" fixed-width="false" style="font-size: 26px; vertical-align: -4px;"></ons-icon>
-            </ons-toolbar-button>
         </div>
     </ons-toolbar>
+
+    <ons-list>
+        <ons-list-item style="margin-top:10px">
+            <input type="search" value="" placeholder="Search" class="search-input"
+                   ng-model="vm.searchConversationString" ng-model-options="{ getterSetter: true }">
+
+        </ons-list-item>
+    </ons-list>
 
 
     <!--TODO: Add Ng-show to the div tag below even to display or hide the message depending on the whether there are conversations done-->
@@ -29,7 +34,7 @@
         <!-- TODO: Use ng-repeat in the tag before to iterate and display ng-repeat="conversation in vm.conversations" done
             TODO: Add an ng-click to take action upon tapping on the list item, i.e navigating to conv. done-->
 
-        <div ng-repeat="conversation in vm.conversations" >
+        <div ng-repeat="conversation in vm.conversations | filter: vm.searchConversationString" >
 
             <ons-list-item class="timeline-li" modifier="tappable" ng-click="vm.goToConversation(conversation)" >
                 <ons-row>
