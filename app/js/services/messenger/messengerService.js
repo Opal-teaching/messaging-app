@@ -27,7 +27,7 @@
 
 		    addConversation: addConversation,
 		    getConversations: getConversations,
-            // TODO Get conversations from server.
+            // TODO Get conversations from server
 		    // getConversationsFromServer:getConversationsFromServer,
 		    sendMessage:sendMessage,
 		    deleteConversation:deleteConversation,

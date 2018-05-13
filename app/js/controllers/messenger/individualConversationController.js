@@ -51,7 +51,6 @@
 	        vm.conversation = navi.getCurrentPage().options.convo;
 	        vm.noMessages = !(vm.conversation && vm.conversation.messages && vm.conversation.messages.length > 0);
         }
-        // TODO link
         /**
          * @ngdoc method
          * @name messaging-app.controller:IndividualConversationController#sendMessage
@@ -69,7 +68,6 @@
             // Reload the conversations
             initController();
         }
-        // TODO link
         /**
          * @ngdoc method
          * @name messaging-app.controller:IndividualConversationController#deleteConversation

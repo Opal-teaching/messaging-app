@@ -39,8 +39,8 @@
     <!--Add the appropiate ng-show to connect with the vm.noMessages in the controller.-->
     <ons-list ng-show="!vm.noMessages" class="timeline" >
         <!--Add the message list using the ng-repeat tag.-->
-        <!--TODO  | orderBy:(messageDate|date: 'MMM d, y h:mm a'):true-->
-        <ons-list-item ng-repeat="message in vm.conversation.messages"
+        <!--TODO check that ordering works when initial messages array is out of order-->
+        <ons-list-item ng-repeat="message in vm.conversation.messages | orderBy:(messageDate|date: 'MMM d, y h:mm a'):true"
                        class="timeline-li" >
             <ons-row>
 
