@@ -71,7 +71,7 @@ place where you place all your application external libraries and dependencies.
 
 6. Now its time to add and install our two major frameworks and front-end dependencies.
   ```
-    bower install onsen#1.3.16 --save
+    bower install onsenui#1.3.16 --save
     bower install angular#1.4.14 --save
   ```
 
