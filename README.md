@@ -279,6 +279,7 @@ In the view, vm refers to the line at the top of the page `<ons-page ng-controll
 
 
 Your folder should look like this at the end:
+
 ![Folder structure at the end of Hello World the Opal Way](./images/image10.png)
 
 
