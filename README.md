@@ -174,8 +174,14 @@ our code as to not let variables escape from scope, if you
 try to simply declare variables in a JavaScript file without function
 encapsulating. You will risk having collision
 problems between your variables of different files in the workspace.
-Now we are ready to add logic to your up, we will now create an onsen navigator,
-and onsen page, and finally our logic for the hello world app.
+
+- Now, link to app.js from index.html by adding the following line between the head tags in `index.html`.
+```
+   <script src="js/app.js" type="text/javascript"></script>
+```
+
+We are now ready to add logic to your app. We will create an onsen navigator,
+an onsen page, and finally our logic for the hello world app.
 
 11. To the index.html file, add the following between the <body> tags
 
@@ -252,8 +258,24 @@ Here are the contents for the controller.
 </html>
 
 ```
-15. Run Code and see if it works.
-16. If the above fails, debug and figure out what's wrong :) Google is your friend and so am I.
+
+15. Add "Hello World" to the controller.
+
+In `helloWorldController.js`, replace the line `// Create and attach hello_world variable to the vm object.` with the following:
+```
+    vm.hello = "Hello World!"
+```
+
+16. Link the controller variable 'hello' to the view.
+
+In `hello-world.html`, replace the line `<!--TODO: Add the binding from the controller to print hello world on the page.-->` with the following:
+```
+    <h1>{{vm.hello}}</h1>
+```
+In the view, vm refers to the line at the top of the page `<ons-page ng-controller="HelloWorldController as vm">`, and `hello` is the variable defined in this controller. The curly brackets are used to express the contents of the variable instead of printing `vm.hello` in plain text to the screen.
+
+17. Run the code and see if it works.
+18. If the above fails, debug and figure out what's wrong :) Google is your friend and so am I.
 
 
 Your folder should look like this at the end:
