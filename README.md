@@ -161,13 +161,13 @@ the set of Angular dependencies for the module.
 
 ```
 (function(){
-    var module = angular.module(<name-module>,["onsen"]);
+    var module = angular.module("<name-module>",["onsen"]);
 
 
 })();
 ```
 This creates and defines the angular module and the angular dependencies,
- use the same name you used in the ng-app tag template.
+ using the same name you used in the ng-app tag template, i.e. `messaging-app` (replace `"<name-module>"` with `"messaging-app"`).
   In terms of dependencies, `onsen` will be our only dependency.
    Notice the `(function(){})();`, this will encapsulate
 our code as to not let variables escape from scope, if you
@@ -234,6 +234,9 @@ Here are the contents for the controller.
     }
 )();
 ```
+
+Again, replace `'<name-module>'` with `'messaging-app'`.
+
 14. Add the controller to your index.html.
 
 ```
