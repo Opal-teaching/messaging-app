@@ -232,7 +232,7 @@ Here are the contents for the controller.
         // Create and attach hello_world variable to the vm object.
 
     }
-)();
+})();
 ```
 
 Again, replace `'<name-module>'` with `'messaging-app'`.
