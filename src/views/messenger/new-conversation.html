@@ -1,0 +1,40 @@
+<ons-page ng-controller="NewConversationController as vm">
+
+    <!-- TOOLBAR -->
+    <ons-toolbar>
+        <div class="left">
+            <!--TODO: Add logic to pop the current page from the navigator (see Onsen documentation).-->
+            <ons-toolbar-button>
+                Close
+            </ons-toolbar-button>
+        </div>
+        <div class="center">
+            New Conversation
+        </div>
+    </ons-toolbar>
+
+    <!-- CONVERSATION CREATION AREA -->
+    <div class="msg-app-new-conversation-login-form">
+        <!--TODO: Add ng-model to attach the inputs below to the controller's vm.name, and vm.imageUrl-->
+        <input type="text" class="msg-app-new-conversation-text-input--underbar" placeholder="Name" value="">
+        <input type="text" class="msg-app-new-conversation-text-input--underbar" placeholder="Image URL" value="">
+        <br>
+
+        <div ng-show="vm.name">
+           <p> Name: {{vm.name}}</p>
+        </div>
+
+        <!-- TODO: Not really a TODO, but notice here how ng-show and ng-src are used to display the photo before creating the conversation.-->
+        <div ng-show="vm.imageUrl">
+            <p> Image:</p>
+            <img ng-src="{{vm.imageUrl}}" alt="" class="msg-app-new-conversation-image">
+        </div>
+
+        <br><br>
+
+        <!--TODO: Add ng-click to call createConversation and ng-disabled to disable the button when the fields are not valid (using checkFields)-->
+        <ons-button modifier="large" class="msg-app-new-conversation-login-button" >
+            Create Conversation
+        </ons-button>
+    </div>
+</ons-page>

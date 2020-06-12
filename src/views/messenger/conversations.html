@@ -1,0 +1,46 @@
+<ons-page ng-controller="ConversationsController as vm">
+
+    <!-- TOOLBAR -->
+    <ons-toolbar>
+        <div class="center">
+            Conversations
+        </div>
+        <div class="right">
+            <!--TODO: Use ng-click to navigate to the new conversation creation page (using vm.newConversation).-->
+            <ons-toolbar-button modifier="outline">
+                <ons-icon icon="ion-compose" fixed-width="false" style="font-size: 26px; vertical-align: -4px"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+
+    <!-- NO CONVERSATIONS -->
+    <!--TODO: Use ng-show in the div tag below to display or hide the text depending on the whether there are conversations.-->
+    <div class="center" style="text-align: center">
+        <p class="msg-app-conversations-empty">No conversations!</p>
+    </div>
+
+    <!-- CONVERSATION LIST -->
+    <!--TODO: Use ng-show in the ons-list tag below to display or hide the list depending on the whether there are conversations.-->
+    <ons-list class="timeline" modifier="inset">
+        <!-- TODO: Use ng-repeat in the ons-list-item tag below to iterate through "conversation in vm.conversations".
+             TODO: Add an ng-click to navigate to the conversation (using vm.goToConversation) when tapping on this list item.-->
+        <ons-list-item class="timeline-li" modifier="tappable">
+            <ons-row>
+                <ons-col width="50px">
+                    <img ng-src="{{conversation.imageUrl}}" class="timeline-image">
+                </ons-col>
+
+                <ons-col>
+                    <div class="timeline-date">{{conversation.lastMessage.messageDate | date: 'MMM d, y h:mm:ss a'}}</div>
+                    <div class="timeline-from">
+                        <span class="timeline-name">{{conversation.user_1}}</span>
+                    </div>
+
+                    <div class="timeline-message">
+                       <!--TODO: Display the lastMessage content via a <p> html tag-->
+                    </div>
+                </ons-col>
+            </ons-row>
+        </ons-list-item>
+    </ons-list>
+</ons-page>
