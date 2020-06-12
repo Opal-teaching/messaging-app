@@ -89,8 +89,8 @@ In this AngularJS style, vm is the equivalent of scope and acts as the link to t
 
 ## MessengerService
 
-I provided to you a start of this service plus a UserService which will mock the user
-using the messaging app. You may navigate to this service and put your name in (be sure to also update the name 
+You've been provided with some starter code for this service, plus a UserService which will mock the user
+using the messaging app. You may navigate to UserService and replace the user with your name (be sure to also update the names 
 in the mock data in MessengerService).
 
 The API functions offered by this service are the following. Short explanations for these functions are given in the code.
@@ -108,7 +108,7 @@ For array manipulations in JavaScript check:
 
 ## Conversation List
 
-The conversation list is made up of the `conversation.html` view and of`conversationsController.js`. 
+The conversation list is made up of the `conversation.html` view and of `conversationsController.js`. 
 This page acts as the root for the [Onsen navigator](https://onsen.io/v1/guide.html#page-navigation), defined in index.html:
 ```
 <ons-navigator var="navi" page="./views/messenger/conversations.html"></ons-navigator>
@@ -344,7 +344,7 @@ the value currently present:
         "test": "karma start karma.conf.js"
     }
 ```
-This will allow you to run your tests as `$npm run test`.
+This will allow you to run your tests as `npm run test`.
 
 You can then use the documentation mentioned above as guidance to fill out some test files. 
 The beginnings of a test file are provided under `src/js/controllers/messenger/conversationsController.spec.js`,
