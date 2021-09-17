@@ -1,3 +1,5 @@
+*** MOVED TO GITLAB ***
+
 # Messaging App
 
 The goal of this mini-project is to create a messaging app using the Opal technology stack.
