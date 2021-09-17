@@ -1,4 +1,4 @@
-*** MOVED TO GITLAB ***
+# *** MOVED TO GITLAB ***
 
 # Messaging App
 
